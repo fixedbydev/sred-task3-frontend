@@ -1,0 +1,38 @@
+<mat-accordion class="container">
+    <mat-expansion-panel expanded class='mb-12'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="mat-expansion-title">
+                    <span>Commits</span>
+                </span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+            <app-ag-grid-common [rowData]="commits" />
+        </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel expanded class='mb-12'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="mat-expansion-title">
+                    <span>Pull Requests</span>
+                </span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+            <app-ag-grid-common [rowData]="pullRequests" />
+        </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel expanded class='mb-12'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="mat-expansion-title">
+                    <span>Issues</span>
+                </span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+            <app-ag-grid-common [rowData]="issues" />
+        </ng-template>
+    </mat-expansion-panel>
+</mat-accordion>

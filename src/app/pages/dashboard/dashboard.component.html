@@ -1,0 +1,33 @@
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="mat-expansion-title">
+                    <!-- <i class="fa fa-github"></i> -->
+                    <span>AirTable</span>
+                    @if (isUserLoggedIn()) {
+                    <mat-icon class="successText">check_circle</mat-icon>
+                    <mat-icon (click)="onSync($event)">sync</mat-icon>
+                    <div class="row-end">
+                        <span class="betweenSpace"></span>
+                        <span>Email: <span class="secondary-text">{{user()?.email}}</span></span>
+                        <span>Last Synced At: <span class="secondary-text">{{user()?.lastSync ? (user()?.lastSync | date : 'medium') : '-' }}</span></span>
+                    </div>
+                    }
+                </span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+            @if(isUserLoggedIn()){
+            <div class="column-end">
+                <button mat-flat-button (click)="onRemove()">Remove</button>
+            </div>
+            } @else {
+            <div class="column-center">
+                <button mat-flat-button (click)="onConnect()">Connect</button>
+                <span class="connect-title">Connect Sredio to AirTable</span>
+            </div>
+            }
+        </ng-template>
+    </mat-expansion-panel>
+</mat-accordion>
