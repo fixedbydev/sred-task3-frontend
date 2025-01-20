@@ -1,0 +1,19 @@
+<mat-accordion class="container">
+    <mat-expansion-panel expanded disabled>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="mat-expansion-title">
+                    <span>Data</span>
+                    <span class="betweenSpace"></span>
+                    <button mat-icon-button (click)="onClose()" aria-label="Close dialog">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>  
+            <ag-grid-angular class="grid" [rowData]="data?.rowData" [columnDefs]="colDefs"
+                [defaultColDef]="defaultColDef" [pagination]="true" [sideBar]="true" />
+        </ng-template>
+    </mat-expansion-panel>
+</mat-accordion>
