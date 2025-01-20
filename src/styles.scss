@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.container {
+    padding: 8px;
+}
+
+.successText {
+    color: rgb(41, 167, 70) !important;
+}
+
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    z-index: 1000;
+    /* Ensure the overlay is on top of other content */
+}
+
+.mat-expansion-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 24px !important;
+    }
+
+    span {
+        margin-left: 8px;
+    }
+
+    mat-icon {
+        margin-left: 8px;
+    }
+}
+
+.betweenSpace {
+    flex: 1 1 auto;
+}
+
+.secondary-text {
+    color: #6c757d;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__title.mat-accent{
+    .dialog-title{
+        color: rgb(255, 255, 255);
+    }
+}
+
+.dialog-xs .mat-mdc-dialog-container {
+    width: 375px !important;
+    max-width: 100% !important;
+}

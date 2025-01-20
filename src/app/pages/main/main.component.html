@@ -1,0 +1,32 @@
+<div class="filter" [formGroup]="filterFormGroup">
+  <mat-form-field class="margin-l" appearance="outline">
+    <mat-label>Entity</mat-label>
+    <mat-select formControlName="collection" (selectionChange)="onEntityChange()">
+      @for (entity of entityLookup; track entity) {
+      <mat-option [value]="entity">{{entity}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-form-field class="margin-l" appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search here" formControlName="searchText">
+  </mat-form-field><button class="margin-l btn-margin-b" mat-flat-button (click)="onNewGlobalSearch()"
+    [disabled]="!filterFormGroup.get('searchText')?.value">New Global Search</button> -->
+</div>
+<mat-accordion class="container">
+  <mat-expansion-panel expanded>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span class="mat-expansion-title">
+          <span>Raw Data</span>
+        </span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <app-ag-grid-common [rowData]="rowData" />
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
+@if (!!newGlobalSearchData) {
+  <app-all-details [commits]="newGlobalSearchData.commits" [pullRequests]="newGlobalSearchData.pullRequests" [issues]="newGlobalSearchData.issues"></app-all-details>
+}

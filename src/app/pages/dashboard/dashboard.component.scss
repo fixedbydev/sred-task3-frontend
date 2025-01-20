@@ -1,0 +1,28 @@
+.column-end {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-end {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.connect-title {
+    color: var(--mdc-filled-button-container-color, var(--mat-sys-primary));
+    font-weight: 500;
+    margin-top: 8px;
+
+}
