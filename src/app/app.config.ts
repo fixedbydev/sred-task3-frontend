@@ -5,10 +5,6 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { TokenInterceptor } from './common/interceptors/token.interceptor';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
